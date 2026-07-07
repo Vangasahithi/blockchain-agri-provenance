@@ -1,1 +1,9 @@
+OrdererOrgs:
 
+  - Name: Orderer
+    Domain: example.com
+
+PeerOrgs:
+
+  - Name: Org1
+    Domain: org1.example.com
