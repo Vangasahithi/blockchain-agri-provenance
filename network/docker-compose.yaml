@@ -1,1 +1,15 @@
+version: '3.8'
 
+services:
+
+  ca.org1.example.com:
+    image: hyperledger/fabric-ca:latest
+    container_name: ca.org1.example.com
+    ports:
+      - "7054:7054"
+
+  orderer.example.com:
+    image: hyperledger/fabric-orderer:latest
+
+  peer0.org1.example.com:
+    image: hyperledger/fabric-peer:latest
