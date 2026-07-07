@@ -1,36 +1,84 @@
-# Blockchain-Based Provenance Tracking and Tamper Detection in Agricultural Supply Chains
+# 🌾 Blockchain-Based Provenance Tracking and Tamper Detection in Agricultural Supply Chains
 
-## Overview
+A blockchain-powered agricultural supply chain management system that provides secure product provenance, traceability, and tamper detection using **Hyperledger Fabric**.
 
-This project is a blockchain-powered agricultural supply chain traceability system developed as a B.Tech major project.
+---
 
-It uses Hyperledger Fabric to securely track agricultural products from farms to consumers while ensuring transparency, provenance, and tamper detection.
+## 🚀 Features
 
-## Features
-
-- Product provenance tracking
+- Blockchain-based product traceability
 - Tamper detection
-- Hyperledger Fabric blockchain
+- Product provenance tracking
 - Smart Contracts (Go Chaincode)
-- IoT sensor integration
-- IPFS decentralized storage
-- REST APIs using Node.js
+- REST APIs using Node.js & Express
 - React Dashboard
+- Product ownership transfer
+- IoT-ready architecture
 - Role-Based Access Control (RBAC)
 
-## Technology Stack
+---
 
-- Hyperledger Fabric 2.5
-- Go (Golang)
+## 🛠 Tech Stack
+
+### Frontend
+- React.js
+- Axios
+
+### Backend
 - Node.js
 - Express.js
-- React
-- MQTT
-- Node-RED
-- IPFS
+
+### Blockchain
+- Hyperledger Fabric
+- Go Chaincode
+
+### Other Technologies
 - Docker
 - Kubernetes
+- MQTT
+- IPFS
 
-## Status
+---
 
-🚧 Currently under development.
+## 📂 Project Structure
+
+```
+blockchain-agri-provenance
+│
+├── backend
+├── chaincode
+├── frontend
+├── network
+├── docker
+├── kubernetes
+├── docs
+└── screenshots
+```
+
+---
+
+## 🔄 Workflow
+
+Farmer → Product Registration → Blockchain Ledger → Distributor → Retailer → Consumer
+
+Every transaction is securely recorded on the blockchain to ensure transparency and traceability.
+
+---
+
+## 🎯 Future Enhancements
+
+- QR Code Tracking
+- Real Hyperledger Fabric Network Integration
+- IoT Sensor Data Collection
+- AI-Based Product Quality Prediction
+- Mobile Application
+
+---
+
+## 👩‍💻 Author
+
+**Sahithi Vanga**
+
+B.Tech – Computer Science & Engineering (IoT)
+
+GITAM University
