@@ -1,9 +1,11 @@
-import AddProduct from "./pages/AddProduct";
-import Home from "./pages/Home";
-import Navbar from "./components/Navbar";
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+
+import Navbar from "./components/Navbar";
 import ProductCard from "./components/ProductCard";
+
+import Home from "./pages/Home";
+import AddProduct from "./pages/AddProduct";
 
 function App() {
 
@@ -21,28 +23,30 @@ function App() {
     }, []);
 
     return (
-<>
-    <Navbar />
+        <>
+            <Navbar />
 
-    <div style={{ padding: "20px", fontFamily: "Arial" }}>
-            <h1>Blockchain-Based Provenance Tracking and Tamper Detection</h1>
+            <div style={{ padding: "20px", fontFamily: "Arial" }}>
+                <h1>Blockchain-Based Provenance Tracking and Tamper Detection</h1>
 
-          <Home />
+                <Home />
 
-<h2>Agricultural Products</h2>
+                <AddProduct />
 
-            {products.length === 0 ? (
-                <p>No products available.</p>
-            ) : (
-                products.map((product) => (
-                    <ProductCard
-                        key={product.id}
-                        product={product}
-                    />
-                ))
-            )}
-           </div>
-</>
+                <h2>Agricultural Products</h2>
+
+                {products.length === 0 ? (
+                    <p>No products available.</p>
+                ) : (
+                    products.map((product) => (
+                        <ProductCard
+                            key={product.id}
+                            product={product}
+                        />
+                    ))
+                )}
+            </div>
+        </>
     );
 }
 
