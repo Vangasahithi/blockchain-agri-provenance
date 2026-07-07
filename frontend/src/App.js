@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import ProductCard from "./components/ProductCard";
 
 function App() {
 
@@ -18,7 +19,7 @@ function App() {
 
     return (
         <div style={{ padding: "20px", fontFamily: "Arial" }}>
-            <h1>Blockchain-Based Provenance Tracking</h1>
+            <h1>Blockchain-Based Provenance Tracking and Tamper Detection</h1>
 
             <h2>Agricultural Products</h2>
 
@@ -26,21 +27,10 @@ function App() {
                 <p>No products available.</p>
             ) : (
                 products.map((product) => (
-                    <div
+                    <ProductCard
                         key={product.id}
-                        style={{
-                            border: "1px solid #ccc",
-                            borderRadius: "8px",
-                            padding: "15px",
-                            marginBottom: "15px"
-                        }}
-                    >
-                        <h3>{product.name}</h3>
-                        <p><strong>ID:</strong> {product.id}</p>
-                        <p><strong>Farmer:</strong> {product.farmer}</p>
-                        <p><strong>Location:</strong> {product.location}</p>
-                        <p><strong>Status:</strong> {product.status}</p>
-                    </div>
+                        product={product}
+                    />
                 ))
             )}
         </div>
