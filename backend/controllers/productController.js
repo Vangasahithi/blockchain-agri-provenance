@@ -1,23 +1,30 @@
 exports.getProducts = async (req, res) => {
-
     res.json({
         status: "success",
-        products: [
-            {
-                id: "P001",
-                name: "Rice",
-                farmer: "Ramesh",
-                location: "Hyderabad",
-                status: "Harvested"
-            },
-            {
-                id: "P002",
-                name: "Wheat",
-                farmer: "Suresh",
-                location: "Warangal",
-                status: "Transported"
-            }
-        ]
+        message: "All Products",
+        data: []
     });
+};
 
+exports.getProduct = async (req, res) => {
+    res.json({
+        status: "success",
+        productId: req.params.id
+    });
+};
+
+exports.createProduct = async (req, res) => {
+    res.json({
+        status: "success",
+        message: "Product Created",
+        product: req.body
+    });
+};
+
+exports.transferOwnership = async (req, res) => {
+    res.json({
+        status: "success",
+        productId: req.params.id,
+        message: "Ownership Transferred"
+    });
 };
