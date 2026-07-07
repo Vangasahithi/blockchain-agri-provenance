@@ -37,6 +37,8 @@ function App() {
 
 <ProductDetails />
 
+<TransferOwnership />
+
 <h2>Agricultural Products</h2>
 
                 {products.length === 0 ? (
