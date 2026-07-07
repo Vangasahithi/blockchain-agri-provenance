@@ -42,6 +42,13 @@ async getProducts() {
     ];
 
 }
+    async getProduct(id) {
+
+    const products = await this.getProducts();
+
+    return products.find(product => product.id === id);
+
+}
 
     async transferOwnership(id, newOwner) {
 
