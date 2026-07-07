@@ -1,13 +1,15 @@
-function App() {
-    return (
-        <div>
-            <h1>Blockchain-Based Provenance Tracking</h1>
-
-            <p>
-                Agricultural Supply Chain Management System
-            </p>
-        </div>
-    );
+{
+  "name": "blockchain-agri-backend",
+  "version": "1.0.0",
+  "description": "Backend for Blockchain Agri Provenance",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.2"
+  }
 }
-
-export default App;
