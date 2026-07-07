@@ -1,4 +1,4 @@
-
+import AddProduct from "./pages/AddProduct";
 import Home from "./pages/Home";
 import Navbar from "./components/Navbar";
 import React, { useEffect, useState } from "react";
