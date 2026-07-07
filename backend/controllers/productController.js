@@ -53,10 +53,17 @@ exports.createProduct = async (req, res) => {
 };
 exports.transferOwnership = async (req, res) => {
 
+    const { newOwner } = req.body;
+
+    console.log(
+        `Product ${req.params.id} transferred to ${newOwner}`
+    );
+
     res.json({
         status: "success",
         productId: req.params.id,
-        message: "Ownership Transferred"
+        newOwner,
+        message: "Ownership transferred successfully"
     });
 
 };
