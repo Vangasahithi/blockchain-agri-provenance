@@ -30,13 +30,20 @@ exports.getProducts = async (req, res) => {
 
 };
 
-exports.getProducts = async (req, res) => {
+exports.getProduct = async (req, res) => {
 
-    const products = await fabricService.getProducts();
+    const product = await fabricService.getProduct(req.params.id);
+
+    if (!product) {
+        return res.status(404).json({
+            status: "error",
+            message: "Product not found"
+        });
+    }
 
     res.json({
         status: "success",
-        data: products
+        data: product
     });
 
 };
