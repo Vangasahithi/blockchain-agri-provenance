@@ -30,11 +30,13 @@ exports.getProducts = async (req, res) => {
 
 };
 
-exports.getProduct = async (req, res) => {
+exports.getProducts = async (req, res) => {
+
+    const products = await fabricService.getProducts();
 
     res.json({
         status: "success",
-        productId: req.params.id
+        data: products
     });
 
 };
@@ -55,9 +57,17 @@ exports.transferOwnership = async (req, res) => {
 
     const { newOwner } = req.body;
 
-    console.log(
-        `Product ${req.params.id} transferred to ${newOwner}`
+    const result = await fabricService.transferOwnership(
+        req.params.id,
+        newOwner
     );
+
+    res.json({
+        status: "success",
+        result
+    });
+
+};
 
     res.json({
         status: "success",
