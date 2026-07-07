@@ -1,15 +1,36 @@
-const path = require("path");
+class FabricService {
 
-async function connectFabric() {
-    console.log("=================================");
-    console.log("Connecting to Hyperledger Fabric");
-    console.log("Wallet Loaded");
-    console.log("Gateway Connected");
-    console.log("=================================");
+    async connect() {
+        console.log("Connected to Hyperledger Fabric");
+    }
 
-    return true;
+    async createProduct(product) {
+
+        console.log("Submitting Product:", product);
+
+        return {
+            success: true,
+            product
+        };
+
+    }
+
+    async getProducts() {
+
+        return [];
+
+    }
+
+    async transferOwnership(id, newOwner) {
+
+        console.log(`Transfer ${id} -> ${newOwner}`);
+
+        return {
+            success: true
+        };
+
+    }
+
 }
 
-module.exports = {
-    connectFabric
-};
+module.exports = new FabricService();
