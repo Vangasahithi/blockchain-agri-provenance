@@ -15,11 +15,33 @@ class FabricService {
 
     }
 
-    async getProducts() {
+async getProducts() {
 
-        return [];
+    return [
+        {
+            id: "P001",
+            name: "Rice",
+            farmer: "Ramesh",
+            location: "Hyderabad",
+            status: "Harvested"
+        },
+        {
+            id: "P002",
+            name: "Tomatoes",
+            farmer: "Suresh",
+            location: "Warangal",
+            status: "In Transit"
+        },
+        {
+            id: "P003",
+            name: "Mangoes",
+            farmer: "Anil",
+            location: "Nagarkurnool",
+            status: "Delivered"
+        }
+    ];
 
-    }
+}
 
     async transferOwnership(id, newOwner) {
 
