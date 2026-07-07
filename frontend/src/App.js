@@ -1,3 +1,4 @@
+import TransferOwnership from "./pages/TransferOwnership";
 import ProductDetails from "./pages/ProductDetails";
 import React, { useEffect, useState } from "react";
 import axios from "axios";
