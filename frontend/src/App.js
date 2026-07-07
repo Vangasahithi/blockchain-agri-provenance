@@ -1,3 +1,5 @@
+
+import Home from "./pages/Home";
 import Navbar from "./components/Navbar";
 import React, { useEffect, useState } from "react";
 import axios from "axios";
@@ -25,7 +27,9 @@ function App() {
     <div style={{ padding: "20px", fontFamily: "Arial" }}>
             <h1>Blockchain-Based Provenance Tracking and Tamper Detection</h1>
 
-            <h2>Agricultural Products</h2>
+          <Home />
+
+<h2>Agricultural Products</h2>
 
             {products.length === 0 ? (
                 <p>No products available.</p>
