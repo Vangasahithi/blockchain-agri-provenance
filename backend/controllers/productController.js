@@ -40,14 +40,17 @@ exports.getProduct = async (req, res) => {
 
 exports.createProduct = async (req, res) => {
 
-    res.json({
+    const product = req.body;
+
+    console.log("New Product:", product);
+
+    res.status(201).json({
         status: "success",
-        message: "Product Created",
-        product: req.body
+        message: "Product added successfully",
+        data: product
     });
 
 };
-
 exports.transferOwnership = async (req, res) => {
 
     res.json({
