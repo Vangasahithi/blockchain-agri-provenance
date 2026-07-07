@@ -1,27 +1,23 @@
-const express = require("express");
-const cors = require("cors");
-const bodyParser = require("body-parser");
-
-const { connectFabric } = require("./fabric");
-
-const app = express();
-
-app.use(cors());
-app.use(bodyParser.json());
-
-app.get("/", async (req, res) => {
-
-    await connectFabric();
+exports.getProducts = async (req, res) => {
 
     res.json({
         status: "success",
-        message: "Blockchain Backend Running"
+        products: [
+            {
+                id: "P001",
+                name: "Rice",
+                farmer: "Ramesh",
+                location: "Hyderabad",
+                status: "Harvested"
+            },
+            {
+                id: "P002",
+                name: "Wheat",
+                farmer: "Suresh",
+                location: "Warangal",
+                status: "Transported"
+            }
+        ]
     });
 
-});
-
-const PORT = 5000;
-
-app.listen(PORT, () => {
-    console.log(`Server running on port ${PORT}`);
-});
+};
