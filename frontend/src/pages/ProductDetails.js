@@ -1,12 +1,24 @@
 function ProductDetails() {
 
+    const product = {
+        id: "P001",
+        name: "Rice",
+        farmer: "Ramesh",
+        location: "Hyderabad",
+        harvestDate: "2026-06-20",
+        status: "Harvested"
+    };
+
     return (
-        <div>
+        <div style={{ marginBottom: "30px" }}>
             <h2>Product Details</h2>
 
-            <p>
-                This page displays detailed provenance information of a selected product, including farmer details, location, harvest date, and blockchain transaction history.
-            </p>
+            <p><strong>ID:</strong> {product.id}</p>
+            <p><strong>Name:</strong> {product.name}</p>
+            <p><strong>Farmer:</strong> {product.farmer}</p>
+            <p><strong>Location:</strong> {product.location}</p>
+            <p><strong>Harvest Date:</strong> {product.harvestDate}</p>
+            <p><strong>Status:</strong> {product.status}</p>
         </div>
     );
 
