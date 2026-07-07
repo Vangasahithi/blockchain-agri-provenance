@@ -30,11 +30,13 @@ function App() {
             <div style={{ padding: "20px", fontFamily: "Arial" }}>
                 <h1>Blockchain-Based Provenance Tracking and Tamper Detection</h1>
 
-                <Home />
+               <Home />
 
-                <AddProduct />
+<AddProduct />
 
-                <h2>Agricultural Products</h2>
+<ProductDetails />
+
+<h2>Agricultural Products</h2>
 
                 {products.length === 0 ? (
                     <p>No products available.</p>
