@@ -1,1 +1,7 @@
+Organizations:
 
+    - &OrdererOrg
+        Name: OrdererOrg
+
+    - &Org1
+        Name: Org1MSP
