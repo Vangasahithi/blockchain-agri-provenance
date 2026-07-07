@@ -2,15 +2,22 @@ const express = require("express");
 const cors = require("cors");
 const bodyParser = require("body-parser");
 
+const { connectFabric } = require("./fabric");
+
 const app = express();
 
 app.use(cors());
 app.use(bodyParser.json());
 
-app.get("/", (req, res) => {
+app.get("/", async (req, res) => {
+
+    await connectFabric();
+
     res.json({
-        message: "Blockchain Agri Provenance Backend Running"
+        status: "success",
+        message: "Blockchain Backend Running"
     });
+
 });
 
 const PORT = 5000;
