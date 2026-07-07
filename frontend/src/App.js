@@ -1,3 +1,4 @@
+import Navbar from "./components/Navbar";
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import ProductCard from "./components/ProductCard";
@@ -18,7 +19,10 @@ function App() {
     }, []);
 
     return (
-        <div style={{ padding: "20px", fontFamily: "Arial" }}>
+<>
+    <Navbar />
+
+    <div style={{ padding: "20px", fontFamily: "Arial" }}>
             <h1>Blockchain-Based Provenance Tracking and Tamper Detection</h1>
 
             <h2>Agricultural Products</h2>
@@ -33,7 +37,8 @@ function App() {
                     />
                 ))
             )}
-        </div>
+           </div>
+</>
     );
 }
 
