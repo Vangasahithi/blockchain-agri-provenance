@@ -1,3 +1,4 @@
+const fabricService = require("../fabric");
 exports.getProducts = async (req, res) => {
 
     res.json({
@@ -42,12 +43,11 @@ exports.createProduct = async (req, res) => {
 
     const product = req.body;
 
-    console.log("New Product:", product);
+    const result = await fabricService.createProduct(product);
 
     res.status(201).json({
         status: "success",
-        message: "Product added successfully",
-        data: product
+        result
     });
 
 };
